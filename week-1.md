@@ -101,13 +101,14 @@ const dosen1: Dosen = {
 };
 ```
 ## Tipe data pada *parameter*
+Penulisannya sama seperti tipe data pada variabel.
 ```ts
 function cetakNama(orang: Orang) {
   console.log(orang.nama);
 }
 ```
 ## Tipe data pada *function* (hasil *return*)
-Tipe data hasil return function dituliskan di antara kurung tutup parameter dan kurung kurawal buka *function*.
+Tipe data hasil *return* *function* dituliskan di antara kurung tutup parameter dan kurung kurawal buka *function*.
 ```ts
 // function yang mengembalikan string
 function getNama(orang: Orang): string {
@@ -162,11 +163,14 @@ orang = objek;
 // ini valid, padahal kita tidak menyebutkan bahwa `objek` bertipe `Orang`
 ```
 ## Array
+Contoh penulisan tipe array untuk kumpulan data primitif:
 ```ts
 let numbers: number[];
-let students: Mahasiswa[];
-
 numbers = [1, 2, 3];
+```
+Contoh penulisan tipe array untuk kumpulan data non-primitif (objek):
+```ts
+let students: Mahasiswa[];
 students = [
   {
     id: 1,
