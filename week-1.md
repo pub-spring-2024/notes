@@ -1,12 +1,14 @@
 Materi: React TypeScript
 
+Waktu: 10.00—12.30 WIB
+
 Hari, tanggal: Minggu, 12 Mei 2024
-# Resource
+# Resources 📚
 - [Dokumentasi resmi TypeScript](https://www.typescriptlang.org/)
 - [TypeScript untuk programmer JavaScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
 - [TypeScript untuk programmer OOP (C#/Java)](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html)
 - [YouTube](https://www.youtube.com/results?search_query=typescript)
-# Persiapan
+# Persiapan 🛠
 Yang perlu diinstal:
 - Node.js
 - `pnpm` (opsional, bisa juga menggunakan `npm`)
@@ -22,7 +24,7 @@ Buka command prompt (Terminal di Windows 11, CMD di Windows 10 ke bawah).
 ```shell
 pnpm add -g typescript
 ```
-# Hello World
+# Hello, world! 🚀
 Buat file bernama `index.ts`:
 ```ts
 let nama: string;
@@ -46,8 +48,8 @@ nama = 58; // tidak valid
 umur = 20; // valid
 umur = true; // tidak valid
 ```
-## Inferention (penyimpulan)
-Variabel yang diinisialisasi nilainya tidak perlu disebutkan tipe datanya.
+## Inferention
+Variabel yang diinisialisasi nilainya tidak perlu disebutkan tipe datanya. Ini disebut inferensi (penyimpulan).
 ```ts
 let angkatan = 21;
 // `angkatan` otomatis bertipe `number`
@@ -82,8 +84,11 @@ interface Orang {
   nama: string;
 }
 
-// menggunakan interface
-let orang1: Orang = {
+// deklarasi variabel menggunakan tipe interface `Orang`
+let orang1: Orang
+
+// mengisi variabel
+orang1 = {
   id: 1,
   nama: "Gibran",
 };
@@ -162,7 +167,9 @@ const komunitas2: Komunitas<Dosen> = {
 };
 ```
 ## Sistem tipe struktural
-Dalam sistem tipe struktural, jika dua benda mempunyai bentuk yang sama, maka keduanya dianggap bertipe sama. Contoh:
+Salah satu prinsip inti TypeScript adalah pemeriksaan tipe berfokus pada "bentuk" nilai. Prinsip ini disebut “sistem tipe struktural”.
+
+Dalam sistem tipe struktural, jika dua objek mempunyai bentuk yang sama, maka keduanya dianggap bertipe sama. Contoh:
 ```ts
 const objek = {
   id: 2,
@@ -174,12 +181,14 @@ orang = objek;
 // valid, padahal kita tidak menyebutkan bahwa `objek` bertipe `Orang`
 ```
 ## Array
-Contoh penulisan tipe array untuk kumpulan data primitif:
+Penulisan tipenya adalah tipe data elemen lalu diakhiri dengan sepasang kurung siku.
+
+Contoh deklarasi array untuk kumpulan data primitif:
 ```ts
 let numbers: number[];
 numbers = [1, 2, 3];
 ```
-Contoh penulisan tipe array untuk kumpulan data non-primitif (objek):
+Contoh deklarasi array untuk kumpulan data non-primitif (objek):
 ```ts
 let students: Mahasiswa[];
 students = [
