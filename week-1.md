@@ -37,10 +37,21 @@ let nama: string;
 nama = "Getch";
 console.log(`Halo, ${nama}!`);
 ```
-Jalankan melalui command prompt:
+Transpilasi ke JavaScript melalui command prompt:
 ```shell
 tsc index.ts
+```
+Jalankan hasil transpilasi:
+```shell
 node index.js
+```
+Kita juga dapat mentranspilasi dan menjalankannya sekaligus dengan script. Inisialisasi `package.json` dengan perintah:
+```shell
+pnpm init
+```
+Di `package.json`, tambahkan script bernama `dev` berisi script: `tsc index.ts && node index.js`. Untuk menjalankannya, jalankan perintah:
+```shell
+pnpm dev
 ```
 # Sintaks dasar
 ## Tipe data pada variabel
