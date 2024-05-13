@@ -17,8 +17,8 @@ Yang perlu diinstal:
 ```shell
 iwr https://get.pnpm.io/install.ps1 -useb | iex
 ```
-## Menginstal TypeScript
-Buka command prompt (Terminal di Windows 11, CMD di Windows 10 ke bawah), lalu jalankan perintah:
+## Menginstal TypeScript secara global
+[TypeScript](https://www.typescriptlang.org/) sebaiknya diinstal secara global agar kita tidak perlu menginstalnya di setiap project yang akan menggunakan TypeScript. Untuk melakukannya, buka command prompt (Terminal di Windows 11, CMD di Windows 10 ke bawah), lalu jalankan perintah:
 ```shell
 pnpm add -g typescript
 ```
