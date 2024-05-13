@@ -60,7 +60,7 @@ Variabel yang diinisialisasi nilainya tidak perlu disebutkan tipe datanya, peril
 let angkatan = 21;
 // `angkatan` otomatis bertipe `number`
 ```
-Variabel `bilangan1` tidak dapat diisi dengan data yang tidak bertipe `number`.
+Variabel `angkatan` tidak dapat diisi dengan data yang tidak bertipe `number`.
 ```ts
 angkatan = "Include"
 // tidak valid, karena `angkatan` harus bertipe `number`
@@ -110,13 +110,16 @@ interface Dosen extends Orang {
   mataKuliah: string;
 }
 
-let mahasiswa1: Mahasiswa = {
+let mahasiswa1: Mahasiswa;
+let dosen1: Dosen;
+
+mahasiswa1 = {
   id: 1,
   nama: "Gibran Rakabuming Raka",
   fakultas: "FISIP",
 };
 
-const dosen1: Dosen = {
+dosen1 = {
   id: 1,
   nama: "Anies Rasyid Baswedan",
   mataKuliah: "Ekonomi",
@@ -125,22 +128,31 @@ const dosen1: Dosen = {
 ## Tipe data pada *parameter* *function*
 Penulisannya sama seperti tipe data pada variabel.
 ```ts
+// deklarasi function
 function cetakNama(orang: Orang) {
   console.log(orang.nama);
 }
+
+// panggil function
+cetakNama(orang1);
 ```
 ## Tipe data pada hasil *return* *function*
 Tipe data hasil *return* *function* dituliskan di antara kurung tutup parameter dan kurung kurawal buka *function*.
 ```ts
+// function yang tidak mengembalikan data
+function cetakNama(orang: Orang): void {
+  console.log(orang.nama);
+}
+
 // function yang mengembalikan string
 function getNama(orang: Orang): string {
   return orang.nama;
 }
 
-// function yang tidak mengembalikan data
-function cetakNama(orang: Orang): void {
-  console.log(orang.nama);
-}
+let nama: string;
+
+// simpan hasil return pemanggilan function ke variabel
+nama = getNama(orang1);
 ```
 ## Generic
 Generic adalah parameter untuk *interface* agar dinamis.
@@ -152,8 +164,15 @@ interface Komunitas<Type> {
   getAnggota: () => Type;
 }
 
-// menggunakan interface, mem-pass tipe `Mahasiswa` sebagai argumen generic
-const komunitas1: Komunitas<Mahasiswa> = {
+// deklarasi variabel dengan tipe interface `Komunitas`
+// mem-pass tipe `Mahasiswa` sebagai argumen generic
+let komunitasMahasiswa: Komunitas<Mahasiswa>;
+
+// deklarasi variabel dengan tipe interface `Komunitas`
+// mem-pass tipe `Dosen` sebagai argumen generic
+let komunitasDosen: Komunitas<Dosen>;
+
+komunitasMahasiswa = {
   id: 1,
   nama: "Getch Community",
   getAnggota: () => {
@@ -162,8 +181,7 @@ const komunitas1: Komunitas<Mahasiswa> = {
   },
 };
 
-// menggunakan interface, mem-pass tipe `Dosen` sebagai argumen generic
-const komunitas2: Komunitas<Dosen> = {
+komunitasDosen = {
   id: 1,
   nama: "Asosiasi Dosen Bandung",
   getAnggota: () => {
