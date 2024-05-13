@@ -122,12 +122,14 @@ function cetakNama(orang: Orang): void {
 ## Generic
 Generic adalah parameter untuk *interface* agar dinamis.
 ```ts
+// membuat interface dengan generic
 interface Komunitas<Type> {
   id: number;
   nama: string;
   getAnggota: () => Type;
 }
 
+// menggunakan interface, mem-pass tipe `Mahasiswa` sebagai argumen generic
 const komunitas1: Komunitas<Mahasiswa> = {
   id: 1,
   nama: "Getch",
@@ -137,6 +139,7 @@ const komunitas1: Komunitas<Mahasiswa> = {
   },
 };
 
+// menggunakan interface, mem-pass tipe `Dosen` sebagai argumen generic
 const komunitas2: Komunitas<Dosen> = {
   id: 1,
   nama: "Dosen Bandung",
