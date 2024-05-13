@@ -2,11 +2,11 @@ Materi: React TypeScript
 
 Hari, tanggal: Minggu, 12 Mei 2024
 # Persiapan
-
 Yang perlu diinstal:
 - Node.js
 - `pnpm` (opsional, bisa menggunakan `npm`)
-- TypeScript (`pnpm add -g typescript`)
+- TypeScript
+- VS Code (opsional, bisa *text editor*/IDE lain)
 ## Menginstal `pnpm` (opsional)
 `pnpm` adalah *package manager* Node.js yang lebih hemat penyimpanan. Untuk menginstalnya, buka command prompt (Terminal di Windows 11, CMD di Windows 10 ke bawah).
 ```shell
@@ -18,13 +18,13 @@ Buka command prompt (Terminal di Windows 11, CMD di Windows 10 ke bawah).
 pnpm add -g typescript
 ```
 # Hello World
-Buat file bernama `index.ts`.
+Buat file bernama `index.ts`:
 ```ts
 let nama: string;
 nama = "Getch";
 console.log(`Halo, ${nama}!`);
 ```
-Jalankan:
+Jalankan melalui command prompt:
 ```shell
 tsc index.ts
 node index.js
@@ -100,14 +100,14 @@ const dosen1: Dosen = {
   mataKuliah: "Ekonomi",
 };
 ```
-## Tipe data pada *parameter*
+## Tipe data pada *parameter* *function*
 Penulisannya sama seperti tipe data pada variabel.
 ```ts
 function cetakNama(orang: Orang) {
   console.log(orang.nama);
 }
 ```
-## Tipe data pada *function* (hasil *return*)
+## Tipe data pada hasil *return* *function*
 Tipe data hasil *return* *function* dituliskan di antara kurung tutup parameter dan kurung kurawal buka *function*.
 ```ts
 // function yang mengembalikan string
