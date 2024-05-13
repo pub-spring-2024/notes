@@ -26,7 +26,7 @@ Periksa apakah TypeScript sudah terinstal dan dapat dijalankan, jalankan perinta
 ```shell
 tsc -v
 ```
-Perintah di atas mungkin akan menyebabkan error `UnauthorizedAccess`, jika itu terjadi maka jalankan perintah:
+Perintah di atas mungkin akan menyebabkan error `UnauthorizedAccess`. Jika itu terjadi, maka buka Powershell **sebagai administrator**, lalu jalankan perintah:
 ```shell
 Set-ExecutionPolicy RemoteSigned
 ```
