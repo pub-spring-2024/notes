@@ -5,10 +5,10 @@ Hari, tanggal: Minggu, 12 Mei 2024
 
 Yang perlu diinstal:
 - Node.js
-- `pnpm` (opsional, boleh menggunakan `npm`)
+- `pnpm` (opsional, bisa menggunakan `npm`)
 - TypeScript (`pnpm add -g typescript`)
-## Menginstal `pnpm`
-Buka command prompt (Terminal di Windows 11, CMD di Windows 10 ke bawah).
+## Menginstal `pnpm` (opsional)
+`pnpm` adalah *package manager* Node.js yang lebih hemat penyimpanan. Untuk menginstalnya, buka command prompt (Terminal di Windows 11, CMD di Windows 10 ke bawah).
 ```shell
 iwr https://get.pnpm.io/install.ps1 -useb | iex
 ```
@@ -78,7 +78,7 @@ let orang1: Orang = {
 };
 ```
 ## Sintaks `extends`
-`extends` adalah sintaks untuk menambahkan property/method pada `interface`.
+`extends` adalah sintaks untuk menambahkan *property*/*method* pada *interface*.
 ```ts
 interface Mahasiswa extends Orang {
   fakultas: string;
@@ -100,13 +100,13 @@ const dosen1: Dosen = {
   mataKuliah: "Ekonomi",
 };
 ```
-## Tipe data pada parameter
+## Tipe data pada *parameter*
 ```ts
 function cetakNama(orang: Orang) {
   console.log(orang.nama);
 }
 ```
-## Tipe data pada function (hasil return)
+## Tipe data pada *function* (hasil *return*)
 Tipe data hasil return function dituliskan di antara kurung tutup parameter dan kurung kurawal buka *function*.
 ```ts
 // function yang mengembalikan string
@@ -120,7 +120,7 @@ function cetakNama(orang: Orang): void {
 }
 ```
 ## Generic
-Generic adalah parameter untuk interface agar dinamis.
+Generic adalah parameter untuk *interface* agar dinamis.
 ```ts
 interface Komunitas<Type> {
   id: number;
@@ -155,7 +155,7 @@ const objek = {
 };
 
 let orang: Orang;
-orang = objekTidakDiketahui;
+orang = objek;
 // ini valid, padahal kita tidak menyebutkan bahwa `objek` bertipe `Orang`
 ```
 ## Array
