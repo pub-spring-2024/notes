@@ -1,14 +1,19 @@
 Materi: React TypeScript
 
 Hari, tanggal: Minggu, 12 Mei 2024
+# Resource
+- [Dokumentasi resmi TypeScript](https://www.typescriptlang.org/)
+- [TypeScript untuk programmer JavaScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- [TypeScript untuk programmer OOP (C#/Java)](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html)
+- [YouTube](https://www.youtube.com/results?search_query=typescript)
 # Persiapan
 Yang perlu diinstal:
 - Node.js
-- `pnpm` (opsional, bisa menggunakan `npm`)
+- `pnpm` (opsional, bisa juga menggunakan `npm`)
 - TypeScript
-- VS Code (opsional, bisa *text editor*/IDE lain)
+- VS Code (opsional, bisa juga menggunakan *text editor*/IDE lain)
 ## Menginstal `pnpm` (opsional)
-`pnpm` adalah *package manager* Node.js yang lebih hemat penyimpanan. Untuk menginstalnya, buka command prompt (Terminal di Windows 11, CMD di Windows 10 ke bawah).
+`pnpm` adalah *package manager* Node.js yang lebih hemat penyimpanan. Untuk menginstalnya, buka Powershell (di Windows 11 dapat melalui Terminal).
 ```shell
 iwr https://get.pnpm.io/install.ps1 -useb | iex
 ```
@@ -35,32 +40,38 @@ Contoh:
 ```ts
 let nama: string;
 let umur: number;
+
+nama = "Arya"; // valid
+nama = 58; // tidak valid
+umur = 20; // valid
+umur = true; // tidak valid
 ```
 ## Inferention (penyimpulan)
 Variabel yang diinisialisasi nilainya tidak perlu disebutkan tipe datanya.
 ```ts
 let angkatan = 21;
-// `bilangan1` otomatis bertipe `number`
+// `angkatan` otomatis bertipe `number`
 ```
 Variabel `bilangan1` tidak dapat diisi dengan data yang tidak bertipe `number`.
 ```ts
-angkatan = "include"
+angkatan = "Include"
 // tidak valid, karena `angkatan` harus bertipe `number`
 ```
 ## Sintaks `any`
-Sintaks `any` digunakan untuk menonaktifkan *typechecking* (sebaiknya dihindari).
+Sintaks `any` digunakan untuk menonaktifkan *typechecking* sehingga dapat diisi oleh tipe apapun. Namun cara ini **sebaiknya dihindari**.
 ```ts
 let data: any;
-data = 21;
-data = "duapuluhsatu";
-data = false;
+data = 21; // valid
+data = "Getch"; // valid
+data = true; // valid
 ```
 ## Union
 Union adalah gabungan dari beberapa tipe data (agar dapat menerima berbagai tipe data).
 ```ts
 let angkatan: number | string;
-angkatan = 21;
-angkatan = "getch";
+angkatan = 21; // valid
+angkatan = "Getch"; // valid
+angkatan = true; // tidak valid
 ```
 ## Sintaks `interface`
 `interface` adalah tipe data untuk objek.
@@ -160,7 +171,7 @@ const objek = {
 
 let orang: Orang;
 orang = objek;
-// ini valid, padahal kita tidak menyebutkan bahwa `objek` bertipe `Orang`
+// valid, padahal kita tidak menyebutkan bahwa `objek` bertipe `Orang`
 ```
 ## Array
 Contoh penulisan tipe array untuk kumpulan data primitif:
@@ -204,4 +215,9 @@ Tuple adalah objek dengan properti tanpa *key*, hanya *value*, seperti array tap
 ```ts
 let item: [string, number];
 item = ["meja", 50_000];
+```
+# React dengan TypeScript
+Buat project React baru menggunakan Vite:
+```shell
+pnpm create vite
 ```
