@@ -1,8 +1,6 @@
-Materi: React TypeScript
-
-Waktu: 10.00—12.30 WIB
-
-Hari, tanggal: Minggu, 12 Mei 2024
+- Materi: React TypeScript
+- Waktu: 10.00—12.30 WIB
+- Hari, tanggal: Minggu, 12 Mei 2024
 # Resources 📚
 - [Dokumentasi resmi TypeScript](https://www.typescriptlang.org/)
 - [TypeScript untuk programmer JavaScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
@@ -10,12 +8,12 @@ Hari, tanggal: Minggu, 12 Mei 2024
 - [YouTube](https://www.youtube.com/results?search_query=typescript)
 # Persiapan 🛠
 Yang perlu diinstal:
-- Node.js
-- `pnpm` (opsional, bisa juga menggunakan `npm`)
-- TypeScript
-- VS Code (opsional, bisa juga menggunakan *text editor*/IDE lain)
+- [Node.js](https://nodejs.org/)
+- [`pnpm`](https://pnpm.io/) (opsional, bisa juga menggunakan `npm`)
+- [TypeScript](https://www.typescriptlang.org/)
+- [VS Code](https://code.visualstudio.com/) (opsional, bisa juga menggunakan *text editor*/IDE lain)
 ## Menginstal `pnpm` (opsional)
-`pnpm` adalah *package manager* Node.js yang lebih hemat penyimpanan. Untuk menginstalnya, buka Powershell (di Windows 11 dapat melalui Terminal).
+[`pnpm`](https://pnpm.io/) adalah *package manager* Node.js yang lebih hemat penyimpanan. Untuk menginstalnya, buka Powershell (di Windows 11 dapat melalui Terminal).
 ```shell
 iwr https://get.pnpm.io/install.ps1 -useb | iex
 ```
