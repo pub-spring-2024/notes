@@ -13,14 +13,22 @@ Yang perlu diinstal:
 - [TypeScript](https://www.typescriptlang.org/)
 - [VS Code](https://code.visualstudio.com/) (opsional, bisa juga menggunakan *text editor*/IDE lain)
 ## Menginstal `pnpm` (opsional)
-[`pnpm`](https://pnpm.io/) adalah *package manager* Node.js yang lebih hemat penyimpanan. Untuk menginstalnya, buka Powershell (di Windows 11 dapat melalui Terminal).
+[`pnpm`](https://pnpm.io/) adalah *package manager* Node.js yang lebih hemat penyimpanan. Untuk menginstalnya, buka Powershell (di Windows 11 dapat melalui Terminal), lalu jalankan perintah:
 ```shell
 iwr https://get.pnpm.io/install.ps1 -useb | iex
 ```
 ## Menginstal TypeScript
-Buka command prompt (Terminal di Windows 11, CMD di Windows 10 ke bawah).
+Buka command prompt (Terminal di Windows 11, CMD di Windows 10 ke bawah), lalu jalankan perintah:
 ```shell
 pnpm add -g typescript
+```
+Periksa apakah TypeScript sudah terinstal dan dapat dijalankan, jalankan perintah:
+```shell
+tsc -v
+```
+Perintah di atas mungkin akan menyebabkan error `UnauthorizedAccess`, jika itu terjadi maka jalankan perintah:
+```shell
+Set-ExecutionPolicy RemoteSigned
 ```
 # Hello, world! 🚀
 Buat file bernama `index.ts`:
