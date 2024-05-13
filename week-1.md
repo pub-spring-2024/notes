@@ -49,13 +49,13 @@ Contoh:
 let nama: string;
 let umur: number;
 
-nama = "Arya"; // valid
+nama = "Arya Segara"; // valid
 nama = 58; // tidak valid
 umur = 20; // valid
 umur = true; // tidak valid
 ```
 ## Inferention
-Variabel yang diinisialisasi nilainya tidak perlu disebutkan tipe datanya. Ini disebut inferensi (penyimpulan).
+Variabel yang diinisialisasi nilainya tidak perlu disebutkan tipe datanya, perilaku ini disebut inferensi (penyimpulan).
 ```ts
 let angkatan = 21;
 // `angkatan` otomatis bertipe `number`
@@ -96,7 +96,7 @@ let orang1: Orang
 // mengisi variabel
 orang1 = {
   id: 1,
-  nama: "Gibran",
+  nama: "Mohammad Mahfud Mahmodin",
 };
 ```
 ## Sintaks `extends`
@@ -112,13 +112,13 @@ interface Dosen extends Orang {
 
 let mahasiswa1: Mahasiswa = {
   id: 1,
-  nama: "Gibran",
-  fakultas: "Ekonomi",
+  nama: "Gibran Rakabuming Raka",
+  fakultas: "FISIP",
 };
 
 const dosen1: Dosen = {
   id: 1,
-  nama: "Anies",
+  nama: "Anies Rasyid Baswedan",
   mataKuliah: "Ekonomi",
 };
 ```
@@ -155,7 +155,7 @@ interface Komunitas<Type> {
 // menggunakan interface, mem-pass tipe `Mahasiswa` sebagai argumen generic
 const komunitas1: Komunitas<Mahasiswa> = {
   id: 1,
-  nama: "Getch",
+  nama: "Getch Community",
   getAnggota: () => {
     const anggota = mahasiswa1;
     return anggota;
@@ -165,7 +165,7 @@ const komunitas1: Komunitas<Mahasiswa> = {
 // menggunakan interface, mem-pass tipe `Dosen` sebagai argumen generic
 const komunitas2: Komunitas<Dosen> = {
   id: 1,
-  nama: "Dosen Bandung",
+  nama: "Asosiasi Dosen Bandung",
   getAnggota: () => {
     const anggota = dosen1;
     return anggota;
@@ -177,12 +177,16 @@ Salah satu prinsip inti TypeScript adalah pemeriksaan tipe berfokus pada "bentuk
 
 Dalam sistem tipe struktural, jika dua objek mempunyai bentuk yang sama, maka keduanya dianggap bertipe sama. Contoh:
 ```ts
+// membuat objek baru tanpa menyebutkan tipenya
 const objek = {
   id: 2,
-  nama: "Prabowo",
+  nama: "Prabowo Subianto Djojohadikusumo",
 };
 
+// deklarasi variabel dengan tipe `Orang`
 let orang: Orang;
+
+// mengisi variabel `orang` dengan nilai dari `objek`
 orang = objek;
 // valid, padahal kita tidak menyebutkan bahwa `objek` bertipe `Orang`
 ```
@@ -200,36 +204,26 @@ let students: Mahasiswa[];
 students = [
   {
     id: 1,
-    nama: "Romi",
+    nama: "Romi Kusuma Bakti",
     fakultas: "Ilmu Komputer",
   },
   {
     id: 2,
-    nama: "Peni",
-    fakultas: "Ekonomi",
+    nama: "Abdul Muhaimin Iskandar",
+    fakultas: "FISIP",
   },
   {
     id: 3,
-    nama: "Putri",
-    fakultas: "Ekonomi",
-  },
-  {
-    id: 3,
-    nama: "Amel",
-    fakultas: "Ekonomi",
-  },
-  {
-    id: 3,
-    nama: "Kharisma",
-    fakultas: "Ekonomi",
-  },
+    nama: "Ganjar Pranowo",
+    fakultas: "Hukum",
+  }
 ];
 ```
 ## Tuple
 Tuple adalah objek dengan properti tanpa *key*, hanya *value*, seperti array tapi ditentukan setiap itemnya.
 ```ts
 let item: [string, number];
-item = ["meja", 50_000];
+item = ["Meja Belajar", 50_000];
 ```
 # React dengan TypeScript
 Buat project React baru menggunakan Vite:
